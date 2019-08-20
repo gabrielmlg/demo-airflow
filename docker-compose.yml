@@ -1,0 +1,19 @@
+
+version: '2.1'
+
+services:
+    db:
+        image: mysql:5.7
+        container_name: zoop-dw-db
+        environment:
+            MYSQL_ROOT_PASSWORD: ""
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+            MYSQL_DATABASE: zoopdw_conciliation
+        ports:
+            - "3309:3306"
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "5MB"
+                max-file: "1"
+        restart: always
