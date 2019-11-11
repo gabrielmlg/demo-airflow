@@ -1,2 +1,6 @@
 .vscode/
 venv/*
+.DS_Store
+airflow.db
+logs/*
+unittests.cfg
